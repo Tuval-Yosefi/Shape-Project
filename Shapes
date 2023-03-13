@@ -1,0 +1,30 @@
+import pygame
+
+# Initialize Pygame
+pygame.init()
+
+# Set the screen size
+screen_width = 800
+screen_height = 600
+screen = pygame.display.set_mode((screen_width, screen_height))
+
+# Set the color for the circle
+blue = (0, 0, 255)
+
+# Set the position and radius of the circle
+x = 400
+y = 300
+radius = 100
+
+# Draw the circle on the screen
+pygame.draw.circle(screen, blue, (x, y), radius)
+
+# Update the display
+pygame.display.update()
+
+# Wait for the user to close the window
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            quit()
